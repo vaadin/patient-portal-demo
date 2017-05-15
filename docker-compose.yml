@@ -1,0 +1,30 @@
+version: '3'
+services:
+  database: 
+    image: mysql:5.7
+    environment: 
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER=pp
+      - MYSQL_PASSWORD=pp
+      - MYSQL_DATABASE=pp
+    ports:
+      - '3306:3306'
+  backend:
+    build: ./patient-portal-backend
+    ports:
+      - '8080:8080'
+    depends_on: 
+      - database
+  angular:
+    build: ./patient-portal-angular
+    ports:
+      - '8081:80'
+    depends_on: 
+      - backend
+  vaadin:
+    build: ./patient-portal-demo-vaadin
+    ports: 
+      - '8082:8080'
+    depends_on:
+      - database
+  
