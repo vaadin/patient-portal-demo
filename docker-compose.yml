@@ -10,13 +10,13 @@ services:
     ports:
       - '3306:3306'
   backend:
-    build: ./patient-portal-backend
+    build: ./patient-portal-demo-backend
     ports:
       - '8080:8080'
     depends_on: 
       - database
   angular:
-    build: ./patient-portal-angular
+    build: ./patient-portal-demo-angular
     ports:
       - '8081:80'
     depends_on: 
