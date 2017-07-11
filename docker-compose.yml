@@ -9,6 +9,7 @@ services:
       - MYSQL_DATABASE=pp
     ports:
       - '3306:3306'
+    command: ["mysqld", "--max-connections", "500"]
   backend:
     build: ./patient-portal-demo-backend
     ports:

@@ -1,12 +1,16 @@
 [submodule "patient-portal-demo-polymer"]
 	path = patient-portal-demo-polymer
 	url = https://github.com/vaadin/patient-portal-demo-polymer
+	branch = .
 [submodule "patient-portal-demo-angular"]
 	path = patient-portal-demo-angular
 	url = https://github.com/vaadin/patient-portal-demo-angular
+	branch = .
 [submodule "patient-portal-demo-vaadin"]
 	path = patient-portal-demo-vaadin
 	url = https://github.com/vaadin/patient-portal-demo-vaadin
+	branch = .
 [submodule "patient-portal-demo-backend"]
 	path = patient-portal-demo-backend
 	url = https://github.com/vaadin/patient-portal-demo-backend
+	branch = .
